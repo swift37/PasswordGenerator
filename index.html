@@ -20,6 +20,16 @@
 		/>
 	</head>
 	<body>
-		<div></div>
+		<div class="wrapper">
+			<div class="password-container">
+				<input type="text" placeholder="Password" disabled />
+				<i class="fa-regular fa-copy"></i>
+			</div>
+			<div class="range-container">
+				<input type="range" min="6" max="16" value="8" />
+				<span class="selected-length">8</span>
+			</div>
+			<button class="generate-button">Generate password</button>
+		</div>
 	</body>
 </html>
