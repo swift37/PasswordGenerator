@@ -40,7 +40,7 @@ body {
 	background: transparent;
 }
 
-.wrapper .password-container i {
+.wrapper .password-container .copy-button {
 	position: absolute;
 	right: 15px;
 	top: 50%;
@@ -50,23 +50,25 @@ body {
 	transform: translateY(-50%);
 }
 
-.wrapper .password-container i:hover {
+.wrapper .password-container .copy-button:hover {
 	color: #9270d7;
 }
 
 .wrapper .range-container {
 	display: flex;
 	align-items: center;
-	gap: 20px;
 }
 
 .wrapper .range-container input {
 	width: 100%;
 	height: 5px;
 	accent-color: #9270d7;
+	cursor: pointer;
 }
 
 .wrapper .range-container .selected-length {
+	min-width: 30px;
+	text-align: right;
 	font-size: 17px;
 	color: #787878;
 }
