@@ -55,10 +55,35 @@ body {
 }
 
 .wrapper .password-indicator {
+	position: relative;
 	height: 4px;
 	background: #dfdfdf;
 	margin: -12px 10px 0 10px;
-	border-radius: 25pxl;
+	border-radius: 25px;
+}
+
+.wrapper .password-indicator::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	border-radius: inherit;
+	transition: width 0.3s ease, background 0.3s ease;
+}
+
+.wrapper .password-indicator#weak::before {
+	width: 20%;
+	background: #e64a4a;
+}
+
+.wrapper .password-indicator#medium::before {
+	width: 50%;
+	background: #f1c80b;
+}
+
+.wrapper .password-indicator#strong::before {
+	width: 100%;
+	background: #9270d7;
 }
 
 .wrapper .range-container {
@@ -94,6 +119,14 @@ body {
 	padding: 0 5px;
 	font-size: 14px;
 	color: #787878;
+}
+
+.wrapper .options-container .option:first-child {
+	pointer-events: none;
+}
+
+.wrapper .options-container .option:first-child input {
+	opacity: 0.5;
 }
 
 .wrapper .options-container .option input {
