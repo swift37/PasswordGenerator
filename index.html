@@ -20,6 +20,37 @@
 		/>
 	</head>
 	<body>
-		<div></div>
+		<div class="wrapper">
+			<div class="password-container">
+				<input type="text" disabled />
+				<i class="fa-regular fa-copy copy-button"></i>
+			</div>
+			<div class="password-indicator"></div>
+			<div class="range-container">
+				<input type="range" min="6" max="16" value="8" />
+				<span class="selected-length">8</span>
+			</div>
+			<div class="options-container">
+				<div class="option">
+					<input type="checkbox" id="lowercase" checked />
+					<label for="lowercase">Lowercase (a-z)</label>
+				</div>
+				<div class="option">
+					<input type="checkbox" id="uppercase" />
+					<label for="uppercase">Uppercase (A-Z)</label>
+				</div>
+				<div class="option">
+					<input type="checkbox" id="numbers" />
+					<label for="numbers">Numbers (0-9)</label>
+				</div>
+				<div class="option">
+					<input type="checkbox" id="symbols" />
+					<label for="symbols">Symbols (#$&!*)</label>
+				</div>
+			</div>
+			<button class="generate-button">Generate password</button>
+		</div>
+
+		<script src="main.js" defer></script>
 	</body>
 </html>

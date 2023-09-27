@@ -4,3 +4,150 @@
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 }
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #9270d7;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	position: relative;
+	max-width: 370px;
+	width: 100%;
+	padding: 30px 25px;
+	border-radius: 15px;
+	background-color: #ffffff;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .password-container {
+	position: relative;
+	height: 50px;
+}
+
+.wrapper .password-container input {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	padding: 0 45px 0 15px;
+	border: 1px solid #aaaaaa;
+	background: transparent;
+}
+
+.wrapper .password-container .copy-button {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	font-size: 20px;
+	color: #787878;
+	cursor: pointer;
+	transform: translateY(-50%);
+}
+
+.wrapper .password-container .copy-button:hover {
+	color: #9270d7;
+}
+
+.wrapper .password-indicator {
+	position: relative;
+	height: 4px;
+	background: #dfdfdf;
+	margin: -12px 10px 0 10px;
+	border-radius: 25px;
+}
+
+.wrapper .password-indicator::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	border-radius: inherit;
+	transition: width 0.3s ease, background 0.3s ease;
+}
+
+.wrapper .password-indicator#weak::before {
+	width: 20%;
+	background: #e64a4a;
+}
+
+.wrapper .password-indicator#medium::before {
+	width: 50%;
+	background: #f1c80b;
+}
+
+.wrapper .password-indicator#strong::before {
+	width: 100%;
+	background: #9270d7;
+}
+
+.wrapper .range-container {
+	display: flex;
+	align-items: center;
+}
+
+.wrapper .range-container input {
+	width: 100%;
+	height: 5px;
+	accent-color: #9270d7;
+	cursor: pointer;
+}
+
+.wrapper .range-container .selected-length {
+	min-width: 30px;
+	text-align: right;
+	font-size: 17px;
+	color: #787878;
+}
+
+.wrapper .options-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	flex-direction: column;
+	gap: 0.7em;
+}
+
+.wrapper .options-container .option {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	padding: 0 5px;
+	font-size: 14px;
+	color: #787878;
+}
+
+.wrapper .options-container .option:first-child {
+	pointer-events: none;
+}
+
+.wrapper .options-container .option:first-child input {
+	opacity: 0.5;
+}
+
+.wrapper .options-container .option input {
+	width: 14px;
+	height: 14px;
+	border: 1px solid #aaaaaa;
+	accent-color: #9270d7;
+}
+
+.wrapper .generate-button {
+	width: 100%;
+	padding: 12px;
+	border-radius: 10px;
+	background-color: #9270d7;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.wrapper .generate-button:hover {
+	background-color: #8250d7;
+}
